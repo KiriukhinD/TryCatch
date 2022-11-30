@@ -1,26 +1,26 @@
 package org.example;
 
-import java.io.IOException;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Main main = new Main();
         try {
             main.getPokaz();
-
-        } catch (IOException e) {
-            System.out.println("error error error");
+            System.out.println("vivod ne budet");
+        } catch (Exception e) {
+            System.out.println("error error");
         }
-
+        System.out.println("hello");
 
     }
 
-    void getPokaz() throws IOException {
+    void getPokaz() throws Exception {
 
-        int a = 7;
-        if (a == 5) {
+        int a = 5;
+
+        if (a == 7) {
             System.out.println("5");
+        } else throw new Exception();
 
-        } else throw new IOException();
     }
 }
